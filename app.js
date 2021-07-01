@@ -11,5 +11,6 @@ console.log("Valid e-mail :"+validator.isEmail('example.com'));
 console.log("Valid URL :"+validator.isURL('https://mead.io'));
 console.log("Valid URL :"+validator.isURL('htclea/mead.io'));
 
-console.log(chalk.green('Success'));
+console.log(chalk.bold.green('Success'));
+console.log(chalk.hex('#DEADED').underline('Hello, world!'))
 
