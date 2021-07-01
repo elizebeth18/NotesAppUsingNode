@@ -1,0 +1,32 @@
+const fs  = require('fs');
+fs.writeFileSync - will create a file if it doesn't exist
+and write the content into it
+if file already exist then it will overwrite the previous
+message with the new message
+fs.writeFileSync("notes.txt","This file is created by Node.js!");
+fs.writeFileSync("notes.txt","Hello World!");
+fs.appendFileSync("notes.txt","\nI am Elizebeth and I am married");
+
+'require' is the keyword to import any file to the current file
+const namE = require('./utils.js');
+
+const adD = require('./utils.js');
+const getNotes = require('./notes');
+
+const sum = adD(4,-2);
+console.log("Sum = "+sum);
+
+const fetchNotes = getNotes();
+console.log(fetchNotes);
+
+console.log("utils.js");
+
+const name = 'Elizebeth';
+
+const add = function (a, b) {
+    return a + b;
+}
+//module.exports,exposes the variables,methods etc. defined in this file
+//module.exports = name;
+
+module.exports = add;
