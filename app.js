@@ -56,4 +56,5 @@ yargs.command({
     }
 })
 
-console.log(yargs.parse());
+//console.log(yargs.parse());
+yargs.parse();
