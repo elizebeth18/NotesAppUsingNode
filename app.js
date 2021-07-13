@@ -10,7 +10,7 @@ yargs.version('1.1.0');
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
-    //to pass arguments to command
+    //to pass arguments to yargs.command
     //the "builder" object is required
     builder:{
         title: {
@@ -33,8 +33,17 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'To delete a note',
-    handler: function(){
-        console.log('To delete a note');
+    //to pass arguments to yargs.command
+    //the "builder" object is required
+    builder: {
+        title: {
+            describe: 'Note Title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function(argv){
+        notes.removeNote(argv.title);
     }
 })
 
